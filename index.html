@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <div class="container">
+        <form name="form">
+            <div>
+                <input type="text" name="displayresult" class="display" placeholder="0">
+            </div>
+            <div class="button">
+                <div class="row">
+                    <input class="btn" type="button" value="7" name="bt7" onclick="fun(bt7.value)">
+                    <input class="btn" type="button" value="8" name="bt8" onclick="fun(bt8.value)">
+                    <input class="btn" type="button" value="9" name="bt9" onclick="fun(bt9.value)">
+                    <input class="btn" type="button" value="+" name="plus" onclick="fun(plus.value)">
+                </div>
+                <div class="row">
+                    <input class="btn" type="button" value="4" name="bt4" onclick="fun(bt4.value)">
+                    <input class="btn" type="button" value="5" name="bt5" onclick="fun(bt5.value)">
+                    <input class="btn" type="button" value="6" name="bt6" onclick="fun(bt6.value)">
+                    <input class="btn" type="button" value="-" name="minus" onclick="fun(minus.value)">
+                </div>
+                <div class="row">
+                    <input class="btn" type="button" value="1" name="bt1" onclick="fun(bt1.value)">
+                    <input class="btn" type="button" value="2" name="bt2" onclick="fun(bt2.value)">
+                    <input class="btn" type="button" value="3" name="bt3" onclick="fun(bt3.value)">
+                    <input class="btn" type="button" value="*" name="mul" onclick="fun(mul.value)">
+                </div>
+                <div class="row">
+                    <input class="btn" type="button" value="0" name="bt0" onclick="fun(bt0.value)">
+                    <input class="btn" type="button" value="." name="d" onclick="fun(d.value)">
+                    <input class="btn" type="button" value="/" name="divi" onclick="fun(divi.value)">
+               <button class="clear" onclick="hide()">clear</button>
+                    <input class="btn" type="button" value="=" name="equal" onclick="displayresult.value = eval(displayresult.value)">
+                 </div>
+
+            </div>
+        </form>
+
+    </div>
+    <script>
+        function fun(result){
+            form.displayresult.value=form.displayresult.value + result;
+
+    }
+    function hide()
+    {
+    var x=document.getElementsByClassName("display")
+if(x.style.display === "none")
+
+
+{
+
+    x.style.display="block";
+}
+else
+{
+
+    x.style.display="none";
+}
+    }
+</script>
+</body>
+
+
+</html>
